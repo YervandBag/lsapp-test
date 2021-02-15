@@ -22,3 +22,7 @@ Route::get('/about', 'App\Http\Controllers\PageController@about');
 Route::get('/services', 'App\Http\Controllers\PageController@services');
 
 Route::resource('posts', 'App\Http\Controllers\PostController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
